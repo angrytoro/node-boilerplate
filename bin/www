@@ -12,7 +12,12 @@ var http = require('http');
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '3000');
+var port;
+if(process.argv[2] === '-p' && normalizePort(process.argv[3])) { //如果是外部指定端口
+  port = normalizePort(process.argv[3])
+} else {
+  port = normalizePort(process.env.PORT || '3000');
+}
 app.set('port', port);
 
 /**
