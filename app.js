@@ -1,7 +1,9 @@
 var express = require('express');
+var compression = require('compression');
 var path = require('path');
 var favicon = require('serve-favicon');
 var session = require('express-session');
+var flash = require('express-flash');
 var RedisStore = require('connect-redis')(session);
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
@@ -13,8 +15,6 @@ var logger = require('./utils/log')('error');
 
 var app = express();
 
-log4js.configure(config.log4js);
-
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
@@ -22,14 +22,16 @@ app.use(require('./middleware/hbs')(app));
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+log4js.configure(config.log4js);
 app.use(log4js.connectLogger(log4js.getLogger("access"), {
   level: log4js.levels.INFO
 }));
+
+app.use(compression());
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
-
 app.use(session({
   store: new RedisStore({
     host: 'localhost',
@@ -44,8 +46,11 @@ app.use(session({
   saveUninitialized: true,
   secret: 'ZoKWeYjQfEoy5S8h'
 }));
+app.use(flash());
 
-app.use(middleware.auth);
+// app.use(middleware.auth);
+
+app.use(require('./routes')(app));
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
@@ -86,6 +91,5 @@ app.use(function (err, req, res, next) {
     });
   }
 });
-
 
 module.exports = app;

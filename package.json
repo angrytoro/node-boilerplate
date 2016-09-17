@@ -7,13 +7,19 @@
   },
   "dependencies": {
     "body-parser": "~1.15.1",
+    "compression": "^1.6.2",
+    "connect-flash": "^0.1.1",
     "connect-redis": "^3.1.0",
     "cookie-parser": "~1.4.3",
     "debug": "~2.2.0",
+    "dotenv": "^2.0.0",
     "express": "~4.13.4",
     "express-session": "^1.14.1",
     "hbs": "~4.0.0",
     "log4js": "^0.6.38",
+    "lusca": "^1.4.1",
+    "mysql2": "^0.15.8",
+    "sequelize": "^3.24.3",
     "serve-favicon": "~2.3.0"
   }
 }

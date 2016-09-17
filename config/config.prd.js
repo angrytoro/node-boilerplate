@@ -1,4 +1,17 @@
 module.exports = {
-  baseUrl: 'http://192.168.27.116/acp-ui/',
-  cas: {}
+  db: {
+    database: '',
+    username: '',
+    password: '',
+    connect: {
+      host: 'localhost',
+      dialect: 'mysql',
+      pool: {
+        max: 5,
+        min: 0,
+        idle: 10000
+      },
+      freezeTableName: true
+    }
+  }
 }
