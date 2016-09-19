@@ -32,12 +32,11 @@ module.exports = function(sequelize, DataTypes) {
     }
   }, {
     tableName: 'user',
-    freezeTableName: true,
-    hooks: {
-      beforeCreate: function(instance, options, fn) {
-        instance.password = utils.hashPassword(instance.password);
-      }
-    }
+    freezeTableName: true
+  });
+
+  User.beforeCreate(function(instance) {
+    instance.password = utils.hashPassword(instance.password);
   });
 
   return User;

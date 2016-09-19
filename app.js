@@ -50,7 +50,7 @@ app.use(flash());
 
 // app.use(middleware.auth);
 
-app.use(require('./routes')(app));
+require('./routes')(app);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

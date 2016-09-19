@@ -1,0 +1,140 @@
+[2016-09-19 15:09:59.865] [ERROR] error - { [Error: Not Found] status: 404 }
+Error: Not Found
+    at d:\git\node-boilerplate\app.js:57:13
+    at Layer.handle [as handle_request] (d:\git\node-boilerplate\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (d:\git\node-boilerplate\node_modules\express\lib\router\index.js:312:13)
+    at d:\git\node-boilerplate\node_modules\express\lib\router\index.js:280:7
+    at Function.process_params (d:\git\node-boilerplate\node_modules\express\lib\router\index.js:330:12)
+    at next (d:\git\node-boilerplate\node_modules\express\lib\router\index.js:271:10)
+    at d:\git\node-boilerplate\node_modules\express\lib\router\index.js:618:15
+    at next (d:\git\node-boilerplate\node_modules\express\lib\router\index.js:256:14)
+    at Function.handle (d:\git\node-boilerplate\node_modules\express\lib\router\index.js:176:3)
+    at router (d:\git\node-boilerplate\node_modules\express\lib\router\index.js:46:12)
+    at Layer.handle [as handle_request] (d:\git\node-boilerplate\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (d:\git\node-boilerplate\node_modules\express\lib\router\index.js:312:13)
+    at d:\git\node-boilerplate\node_modules\express\lib\router\index.js:280:7
+    at Function.process_params (d:\git\node-boilerplate\node_modules\express\lib\router\index.js:330:12)
+    at next (d:\git\node-boilerplate\node_modules\express\lib\router\index.js:271:10)
+    at module.exports (d:\git\node-boilerplate\node_modules\connect-flash\lib\flash.js:21:5)
+[2016-09-19 15:10:18.515] [ERROR] error - [ReferenceError: crypto is not defined]
+ReferenceError: crypto is not defined
+    at Object.module.exports.hashPassword (d:\git\node-boilerplate\utils\index.js:3:15)
+    at d:\git\node-boilerplate\routes\auth.js:29:21
+    at Layer.handle [as handle_request] (d:\git\node-boilerplate\node_modules\express\lib\router\layer.js:95:5)
+    at next (d:\git\node-boilerplate\node_modules\express\lib\router\route.js:131:13)
+    at Route.dispatch (d:\git\node-boilerplate\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (d:\git\node-boilerplate\node_modules\express\lib\router\layer.js:95:5)
+    at d:\git\node-boilerplate\node_modules\express\lib\router\index.js:277:22
+    at Function.process_params (d:\git\node-boilerplate\node_modules\express\lib\router\index.js:330:12)
+    at next (d:\git\node-boilerplate\node_modules\express\lib\router\index.js:271:10)
+    at Function.handle (d:\git\node-boilerplate\node_modules\express\lib\router\index.js:176:3)
+    at router (d:\git\node-boilerplate\node_modules\express\lib\router\index.js:46:12)
+    at Layer.handle [as handle_request] (d:\git\node-boilerplate\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (d:\git\node-boilerplate\node_modules\express\lib\router\index.js:312:13)
+    at d:\git\node-boilerplate\node_modules\express\lib\router\index.js:280:7
+    at Function.process_params (d:\git\node-boilerplate\node_modules\express\lib\router\index.js:330:12)
+    at next (d:\git\node-boilerplate\node_modules\express\lib\router\index.js:271:10)
+[2016-09-19 15:13:51.872] [ERROR] error - { [SequelizeValidationError: notNull Violation: name cannot be null,
+notNull Violation: email cannot be null,
+notNull Violation: password cannot be null]
+  name: 'SequelizeValidationError',
+  message: 'notNull Violation: name cannot be null,\nnotNull Violation: email cannot be null,\nnotNull Violation: password cannot be null',
+  errors: 
+   [ { message: 'name cannot be null',
+       type: 'notNull Violation',
+       path: 'name',
+       value: null },
+     { message: 'email cannot be null',
+       type: 'notNull Violation',
+       path: 'email',
+       value: null },
+     { message: 'password cannot be null',
+       type: 'notNull Violation',
+       path: 'password',
+       value: null } ] }
+SequelizeValidationError: notNull Violation: name cannot be null,
+notNull Violation: email cannot be null,
+notNull Violation: password cannot be null
+    at d:\git\node-boilerplate\node_modules\sequelize\lib\instance-validator.js:74:14
+    at processImmediate [as _immediateCallback] (timers.js:383:17)
+From previous event:
+    at Promise.then (d:\git\node-boilerplate\node_modules\sequelize\lib\promise.js:21:17)
+    at Instance.save (d:\git\node-boilerplate\node_modules\sequelize\lib\instance.js:567:29)
+    at Model.create (d:\git\node-boilerplate\node_modules\sequelize\lib\model.js:1813:6)
+    at d:\git\node-boilerplate\routes\auth.js:12:11
+    at Layer.handle [as handle_request] (d:\git\node-boilerplate\node_modules\express\lib\router\layer.js:95:5)
+    at next (d:\git\node-boilerplate\node_modules\express\lib\router\route.js:131:13)
+    at Route.dispatch (d:\git\node-boilerplate\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (d:\git\node-boilerplate\node_modules\express\lib\router\layer.js:95:5)
+    at d:\git\node-boilerplate\node_modules\express\lib\router\index.js:277:22
+    at Function.process_params (d:\git\node-boilerplate\node_modules\express\lib\router\index.js:330:12)
+    at next (d:\git\node-boilerplate\node_modules\express\lib\router\index.js:271:10)
+    at Function.handle (d:\git\node-boilerplate\node_modules\express\lib\router\index.js:176:3)
+    at router (d:\git\node-boilerplate\node_modules\express\lib\router\index.js:46:12)
+    at Layer.handle [as handle_request] (d:\git\node-boilerplate\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (d:\git\node-boilerplate\node_modules\express\lib\router\index.js:312:13)
+    at d:\git\node-boilerplate\node_modules\express\lib\router\index.js:280:7
+    at Function.process_params (d:\git\node-boilerplate\node_modules\express\lib\router\index.js:330:12)
+    at next (d:\git\node-boilerplate\node_modules\express\lib\router\index.js:271:10)
+    at module.exports (d:\git\node-boilerplate\node_modules\connect-flash\lib\flash.js:21:5)
+[2016-09-19 15:15:05.487] [ERROR] error - { [SequelizeValidationError: notNull Violation: name cannot be null,
+notNull Violation: email cannot be null,
+notNull Violation: password cannot be null]
+  name: 'SequelizeValidationError',
+  message: 'notNull Violation: name cannot be null,\nnotNull Violation: email cannot be null,\nnotNull Violation: password cannot be null',
+  errors: 
+   [ { message: 'name cannot be null',
+       type: 'notNull Violation',
+       path: 'name',
+       value: null },
+     { message: 'email cannot be null',
+       type: 'notNull Violation',
+       path: 'email',
+       value: null },
+     { message: 'password cannot be null',
+       type: 'notNull Violation',
+       path: 'password',
+       value: null } ] }
+SequelizeValidationError: notNull Violation: name cannot be null,
+notNull Violation: email cannot be null,
+notNull Violation: password cannot be null
+    at d:\git\node-boilerplate\node_modules\sequelize\lib\instance-validator.js:74:14
+    at processImmediate [as _immediateCallback] (timers.js:383:17)
+From previous event:
+    at Promise.then (d:\git\node-boilerplate\node_modules\sequelize\lib\promise.js:21:17)
+    at Instance.save (d:\git\node-boilerplate\node_modules\sequelize\lib\instance.js:567:29)
+    at Model.create (d:\git\node-boilerplate\node_modules\sequelize\lib\model.js:1813:6)
+    at d:\git\node-boilerplate\routes\auth.js:12:11
+    at Layer.handle [as handle_request] (d:\git\node-boilerplate\node_modules\express\lib\router\layer.js:95:5)
+    at next (d:\git\node-boilerplate\node_modules\express\lib\router\route.js:131:13)
+    at Route.dispatch (d:\git\node-boilerplate\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (d:\git\node-boilerplate\node_modules\express\lib\router\layer.js:95:5)
+    at d:\git\node-boilerplate\node_modules\express\lib\router\index.js:277:22
+    at Function.process_params (d:\git\node-boilerplate\node_modules\express\lib\router\index.js:330:12)
+    at next (d:\git\node-boilerplate\node_modules\express\lib\router\index.js:271:10)
+    at Function.handle (d:\git\node-boilerplate\node_modules\express\lib\router\index.js:176:3)
+    at router (d:\git\node-boilerplate\node_modules\express\lib\router\index.js:46:12)
+    at Layer.handle [as handle_request] (d:\git\node-boilerplate\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (d:\git\node-boilerplate\node_modules\express\lib\router\index.js:312:13)
+    at d:\git\node-boilerplate\node_modules\express\lib\router\index.js:280:7
+    at Function.process_params (d:\git\node-boilerplate\node_modules\express\lib\router\index.js:330:12)
+    at next (d:\git\node-boilerplate\node_modules\express\lib\router\index.js:271:10)
+    at module.exports (d:\git\node-boilerplate\node_modules\connect-flash\lib\flash.js:21:5)
+[2016-09-19 16:40:49.493] [ERROR] error - [TypeError: Not a string or buffer]
+TypeError: Not a string or buffer
+    at TypeError (native)
+    at Hash.update (crypto.js:70:16)
+    at Object.module.exports.hashPassword (d:\git\node-boilerplate\utils\index.js:5:9)
+    at d:\git\node-boilerplate\routes\auth.js:38:23
+    at Layer.handle [as handle_request] (d:\git\node-boilerplate\node_modules\express\lib\router\layer.js:95:5)
+    at next (d:\git\node-boilerplate\node_modules\express\lib\router\route.js:131:13)
+    at Route.dispatch (d:\git\node-boilerplate\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (d:\git\node-boilerplate\node_modules\express\lib\router\layer.js:95:5)
+    at d:\git\node-boilerplate\node_modules\express\lib\router\index.js:277:22
+    at Function.process_params (d:\git\node-boilerplate\node_modules\express\lib\router\index.js:330:12)
+    at next (d:\git\node-boilerplate\node_modules\express\lib\router\index.js:271:10)
+    at Function.handle (d:\git\node-boilerplate\node_modules\express\lib\router\index.js:176:3)
+    at router (d:\git\node-boilerplate\node_modules\express\lib\router\index.js:46:12)
+    at Layer.handle [as handle_request] (d:\git\node-boilerplate\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (d:\git\node-boilerplate\node_modules\express\lib\router\index.js:312:13)
+    at d:\git\node-boilerplate\node_modules\express\lib\router\index.js:280:7
