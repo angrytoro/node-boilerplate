@@ -1,8 +1,8 @@
 module.exports = {
   db: {
-    database: '',
-    username: '',
-    password: '',
+    database: 'dms',
+    username: 'root',
+    password: '123456',
     connect: {
       host: 'localhost',
       dialect: 'mysql',
